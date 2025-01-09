@@ -5,7 +5,8 @@ from selenium.webdriver.support import expected_conditions as EC
 import pandas as pd
 
 # Chrome 드라이버 설정 및 URL 설정
-url = 'https://www.betman.co.kr/main/mainPage/gamebuy/gameSlip.do?gmId=G101&gmTs=240132'
+date = 250109
+url = f'https://www.betman.co.kr/main/mainPage/gamebuy/gameSlip.do?gmId=G101&gmTs={(date)}'
 driver = webdriver.Chrome()
 
 try:

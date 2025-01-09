@@ -1,9 +1,10 @@
 import pandas as pd
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
-
+predict_file = "day16"
+actual_file = "day15"
 # 예측 결과와 실제 결과 파일 불러오기
-results_df = pd.read_excel("/Users/sangwoo/Desktop/experience/day16/game_result.xlsx")  # 예측 결과 파일
-actual_results_df = pd.read_excel("/Users/sangwoo/Desktop/experience/day15/verification.xlsx")  # 실제 결과 파일
+results_df = pd.read_excel(f"/Users/sangwoo/Desktop/experience/{predict_file}/game_result.xlsx")  # 예측 결과 파일
+actual_results_df = pd.read_excel(f"/Users/sangwoo/Desktop/experience/{actual_file}/verification.xlsx")  # 실제 결과 파일
 
 # 예측 결과와 실제 결과 병합
 merged_df = pd.merge(results_df, actual_results_df, on="게임 번호", how="inner")
